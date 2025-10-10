@@ -1,0 +1,65 @@
+/* Mission Statement - WDD 131
+   Author: Jaylynn Tautu
+   Description: Styles to match the BYUI Mission Statement mockup
+*/
+
+/* 1. Base text settings */
+body {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 20px;
+  line-height: 1.5; /* improves readability */
+  margin: 0;
+  padding: 0;
+  background-color: white;
+}
+
+/* 2. Centered content box with max width */
+.content {
+  max-width: 600px;
+  margin: 50px auto;  /* centers the box horizontally and adds top spacing */
+  padding: 30px;      /* adds space inside the box */
+  border: 1px solid #ccc;  /* light gray border */
+  text-align: center;      /* centers the titles */
+}
+
+/* 3. Main title (Mission Statement) */
+.title h1 {
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+/* 4. Subtitle (Brigham Young University–Idaho) */
+.title h2 {
+  color: #006EB6;          /* BYUI blue */
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 1rem;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+/* Divider line under the header */
+.title {
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 15px;
+}
+
+/* 5. Paragraph styling */
+main p {
+  text-align: left;       /* left-align paragraphs */
+  margin-bottom: 20px;    /* space between paragraphs */
+}
+
+/* 6. Ordered list styling */
+.does-list {
+  text-align: left;
+  margin-left: 20px;
+}
+
+/* 7. Logo image */
+.logo {
+  width: 150px;           /* resize logo */
+  margin-top: 30px;
+}
