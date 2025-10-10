@@ -63,3 +63,19 @@ main p {
   width: 150px;           /* resize logo */
   margin-top: 30px;
 }
+
+/* ===================== */
+/* 8. Dark Theme Styles */
+/* ===================== */
+body.dark {
+  background-color: #333;  /* dark gray background */
+  color: white;            /* text white for readability */
+}
+
+body.dark .content {
+  border-color: #555;      /* slightly darker border for dark theme */
+}
+
+body.dark .title h2 {
+  color: #00A1E0;          /* lighter blue for subtitle on dark background */
+}
