@@ -1,0 +1,171 @@
+/* CoolPics CSS - WDD 131 */
+/* Author: Jaylynn Tautu */
+
+/* 1. Import font and define variables */
+@import url("https://fonts.googleapis.com/css2?family=Mooli&display=swap");
+
+:root {
+  --primary-color: #52489c;
+  --secondary-color: #59c3c3;
+  --accent-color: #f45b69;
+  --text-dark: #333;
+  --text-light: #ffffff;
+  --primary-font: Arial, Helvetica, sans-serif;
+  --secondary-font: 'Mooli', sans-serif;
+}
+
+/* 2. Base styles */
+body {
+  font-family: var(--primary-font);
+  font-size: 1.1em;
+  margin: 0;
+  padding: 0;
+  color: var(--text-dark);
+  background-color: #fff;
+}
+
+a {
+  color: var(--text-light);
+  text-decoration: underline; /* underlines nav links */
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--secondary-color);
+}
+
+/* 3. Header */
+header {
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  text-align: center;
+  padding: 1em;
+}
+
+header h1 {
+  font-family: var(--secondary-font);
+  margin: 0;
+  font-size: 2em;
+}
+
+/* Menu button for mobile */
+header .menu {
+  background: none;
+  border: none;
+  color: var(--text-light);
+  font-size: 1em;
+  cursor: pointer;
+  margin-top: 0.5em;
+}
+
+/* Nav styling */
+header nav {
+  display: none;
+}
+
+header nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0.5em 0 0 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+  justify-content: center;
+}
+
+header nav ul li a {
+  font-family: var(--secondary-font);
+}
+
+/* 4. Footer */
+footer {
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  text-align: center;
+  padding: 1em;
+}
+
+/* 5. Main content */
+main {
+  padding: 1em;
+  text-align: center;
+}
+
+main h2 {
+  font-family: var(--secondary-font);
+  color: var(--secondary-color);
+  margin-bottom: 1em;
+}
+
+/* 6. Gallery section */
+.gallery {
+  display: grid;
+  grid-template-columns: 1fr; /* single column for small screens */
+  gap: 1em;
+  justify-items: center;
+}
+
+/* ✅ Updated image styling */
+.gallery figure {
+  margin: 0;
+  width: 250px;
+  height: 250px;
+  overflow: hidden;
+  background-color: #fff; /* white border background */
+  border: 5px solid #fff; /* neat white border */
+  box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.4); /* soft black shadow on right/bottom */
+}
+
+.gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0; /* sharp clean corners */
+}
+
+/* 7. Responsive styling */
+
+/* Medium screens (tablets) */
+@media screen and (min-width: 700px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  header nav {
+    display: flex;
+    justify-content: center;
+  }
+
+  header nav ul {
+    flex-direction: row;
+    gap: 2em;
+  }
+
+  header .menu {
+    display: none;
+  }
+}
+
+/* Large screens (desktop) */
+@media screen and (min-width: 1000px) {
+  header h1 {
+    font-size: 2.5em;
+  }
+
+  header nav {
+    display: flex;
+    justify-content: center;
+    margin-top: 0.5em;
+  }
+
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  header .menu {
+    display: none;
+  }
+}
