@@ -1,0 +1,143 @@
+/* ========== Base Styles ========== */
+
+/* Body and default font */
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  color: #473144; /* dark text */
+  background-color: #ffffff;
+  margin: 0;
+  padding: 0;
+}
+
+/* Headings use Lora */
+h1, h2, h3 {
+  font-family: 'Lora', serif;
+  color: #AF1B3F; /* red headline */
+  margin-top: 0;
+}
+
+/* Links */
+a {
+  color: #AF1B3F;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Accessibility: skip link */
+.skiptocontent a {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background-color: #AF1B3F;
+  color: white;
+  padding: 8px;
+  text-decoration: none;
+  z-index: 100;
+}
+
+.skiptocontent a:focus {
+  top: 0;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem 0;
+  background-color: #EFC69B; /* gold */
+  color: #473144;
+}
+
+/* ========== Layout + Header Styling (Steps 4–5) ========== */
+
+/* Header container (title centered, spacing) */
+header {
+  text-align: center;
+  padding: 2rem 0 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Big centered title */
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #AF1B3F;
+}
+
+/* NAV element gets the lines and centering per instructions */
+header nav {
+  border-top: 3px solid #473144;   /* line above nav */
+  border-bottom: 3px solid #473144;/* line below nav */
+  padding: 0.5rem 0;               /* increase navbar height */
+  max-width: 1200px;               /* “nav does not go all the way to the edge” */
+  margin: 0 auto;                  /* center the block */
+}
+
+/* ===== NAVIGATION GRID ===== */
+.main-nav {
+  list-style: none; /* remove bullets */
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 100px 100px 100px; /* exact units for 3 columns */
+  justify-content: end; /* move grid to right side */
+  justify-items: end;   /* align each item right */
+}
+
+.main-nav li {
+  display: block;
+}
+
+.main-nav a {
+  font-size: 1.25rem; /* larger than body text */
+  color: #AF1B3F;
+  text-decoration: none;
+  padding: 0.5rem;
+  line-height: 1.8; /* increase navbar height */
+}
+
+/* ===== MAIN LAYOUT GRID ===== */
+main {
+  display: grid;
+  grid-template-columns: 3fr 1fr; /* articles (left) | filters (right) */
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+/* ===== ARTICLE GRID ===== */
+article {
+  display: grid;
+  grid-template-columns: 200px 1fr; /* details (left) | content (right) */
+  gap: 1rem;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #EFC69B;
+}
+
+/* Article info box */
+.article-info {
+  background-color: #EFC69B;
+  padding: 0.5rem;
+  font-size: 0.9rem;
+}
+
+/* Article content area */
+.article-content img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+/* Optional: filters section style */
+.filters {
+  background-color: #f8f5f2;
+  border: 1px solid #EFC69B;
+  padding: 1rem;
+}
