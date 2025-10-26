@@ -114,25 +114,43 @@ main {
 article {
   display: grid;
   grid-template-columns: 200px 1fr; /* details (left) | content (right) */
-  gap: 1rem;
-  margin-bottom: 2rem;
+  gap: 1.5rem;
+  margin-bottom: 2rem;              /* space between articles */
   padding-bottom: 1rem;
   border-bottom: 1px solid #EFC69B;
 }
 
-/* Article info box */
+/* ===== ARTICLE DETAILS (LEFT SIDE) ===== */
 .article-info {
   background-color: #EFC69B;
-  padding: 0.5rem;
-  font-size: 0.9rem;
+  padding: 0.75rem 1rem;
+  font-size: 0.95rem;
+  text-align: right;                /* Step: right-align list */
+  border-right: 3px solid #473144;  /* Step: add right border */
+  line-height: 1.3;                 /* Step: slightly reduce space between lines */
 }
 
-/* Article content area */
+/* Enlarge the date font (Step: increase size) */
+.date {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+/* ===== ARTICLE CONTENT (RIGHT SIDE) ===== */
+.article-content {
+  padding-left: 1rem;
+}
+
+.article-content h2 {
+  margin-top: 0.3rem;               /* Step: align title vertically with date */
+}
+
 .article-content img {
   max-width: 100%;
   height: auto;
   display: block;
-  margin-bottom: 0.5rem;
+  margin: 1rem auto;                /* Step: center image */
+  border: 1px solid #EFC69B;
 }
 
 /* Optional: filters section style */
