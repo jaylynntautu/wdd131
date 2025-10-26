@@ -1,3 +1,4 @@
+// ========== Articles Data ==========
 const articles = [
   {
     id: 1,
@@ -29,7 +30,7 @@ const articles = [
     title: "Belgariad Book One: Pawn of Prophecy",
     date: "Feb 12, 2022",
     description:
-      "A fierce dispute among the Gods and the theft of a powerful Orb leaves the World divided into five kingdoms. Young Garion, with his 'Aunt Pol' and an elderly man calling himself Wolf -- a father and daughter granted near-immortality by one of the Gods -- set out on a complex mission.",
+      "A fierce dispute among the Gods and the theft of a powerful Orb leaves the World divided into five kingdoms. Young Garion, with his 'Aunt Pol' and an elderly man calling himself Wolf — a father and daughter granted near-immortality by one of the Gods — set out on a complex mission.",
     imgSrc:
       "https://images-na.ssl-images-amazon.com/images/I/41ZxXA+nInL.jpg",
     imgAlt: "Book cover for Pawn of Prophecy",
@@ -39,13 +40,18 @@ const articles = [
   }
 ];
 
-// Build and display articles dynamically
+// ========== Function to Build Articles ==========
 function displayArticles(articleList) {
-  const container = document.querySelector("main");
-  container.innerHTML = ""; // clear previous content
+  // Select the container inside the main section
+  const container = document.querySelector(".articles");
+  container.innerHTML = ""; // clear any existing content
 
+  // Loop through each article object
   articleList.forEach(article => {
+    // Create a new article element
     const articleElement = document.createElement("article");
+
+    // Use template literal for markup
     articleElement.innerHTML = `
       <div class="article-info">
         <p class="date">${article.date}</p>
@@ -53,15 +59,18 @@ function displayArticles(articleList) {
         <p>Genre: ${article.genre}</p>
         <p>Rating: ${article.stars}</p>
       </div>
+
       <div class="article-content">
         <h2>${article.title}</h2>
         <img src="${article.imgSrc}" alt="${article.imgAlt}" />
         <p>${article.description}</p>
       </div>
     `;
+
+    // Append the new article to the container
     container.appendChild(articleElement);
   });
 }
 
+// ========== Run the Function ==========
 displayArticles(articles);
-
