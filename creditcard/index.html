@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Credit Card Payment Form" />
+  <meta name="author" content="Jaylynn Tautu" />
+
+  <title>Credit Card Form</title>
+
+  <link rel="stylesheet" href="creditcard.css" />
+  <link rel="icon" type="image/png" href="favicon.png" />
+</head>
+<body>
+
+  <div id="form-container">
+
+    <form id="creditCardForm">
+
+      <!-- CARD FRONT -->
+      <section id="card-front">
+
+        <div id="shadow"></div>
+
+        <div id="image-container">
+          <span id="amount">Paying: <strong>$99</strong></span>
+          <img class="card-image" height="55px"
+               src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA..." />
+        </div>
+
+        <label for="card-number">Card Number</label>
+        <input type="text" id="card-number" name="card-number"
+          placeholder="1234 5678 9101 1112"
+          required minlength="16" maxlength="16" pattern="\d*">
+
+        <label for="card-holder">Card Holder</label>
+        <input type="text" id="card-holder" name="card-holder"
+          placeholder="John Doe" required>
+
+        <div id="exp-container">
+          <label for="card-month">Expiration</label>
+          <input type="text" id="card-month" name="card-month"
+            placeholder="MM" required minlength="2" maxlength="2" pattern="\d*">
+          <input type="text" id="card-year" name="card-year"
+            placeholder="YY" required minlength="2" maxlength="2" pattern="\d*">
+        </div>
+      </section>
+
+      <!-- CARD BACK -->
+      <section id="card-back">
+        <div id="card-stripe"></div>
+
+        <label for="card-cvc">CVC</label>
+        <input type="text" id="card-cvc" name="card-cvc"
+          placeholder="123" required minlength="3" maxlength="4" pattern="\d*">
+      </section>
+
+      <!-- Hidden token field -->
+      <input type="text" id="card-token" />
+
+      <button type="submit">Submit Payment</button>
+
+    </form>
+
+  </div>
+</body>
+</html>
