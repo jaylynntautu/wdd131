@@ -43,4 +43,31 @@
             <label for="card-month">EXPIRATION</label>
             <div class="exp-row">
               <input type="text" id="card-month" placeholder="MM"
-                     required
+                     required minlength="2" maxlength="2">
+              <input type="text" id="card-year" placeholder="YY"
+                     required minlength="2" maxlength="2">
+            </div>
+          </div>
+
+        </div>
+
+      </section>
+
+      <!-- CARD BACK -->
+      <section id="card-back">
+        <div id="card-stripe"></div>
+
+        <label for="card-cvc">CVC/CVV</label>
+        <input type="text" id="card-cvc"
+               placeholder="XXX"
+               required minlength="3" maxlength="4">
+      </section>
+
+      <button type="submit" id="submit-btn">Submit</button>
+
+    </form>
+
+  </main>
+
+</body>
+</html>
