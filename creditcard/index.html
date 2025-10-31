@@ -4,62 +4,43 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Credit Card Payment Form" />
-  <meta name="author" content="Jaylynn Tautu" />
+  <meta name="author" content="Your Name" />
 
   <title>Credit Card Form</title>
 
-  <link rel="icon" type="image/png" href="favicon.png" />
   <link rel="stylesheet" href="creditcard.css" />
+  <link rel="icon" type="image/png" href="favicon.png" />
 </head>
 <body>
 
-  <div id="form-container">
+  <main id="form-wrap">
 
     <form id="creditCardForm">
 
       <!-- CARD FRONT -->
       <section id="card-front">
 
-        <div id="shadow"></div>
+        <p id="total">TOTAL: $199</p>
 
-        <div id="image-container">
-          <span id="amount">PAYING: <strong>$99</strong></span>
-          <img class="card-image" height="55px"
-            src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA... (leave your long SVG exactly as before)">
+        <div class="icon-box">
+          <img class="card-image" src="favicon.png" width="40" alt="card icon">
         </div>
 
-        <label for="card-number">CARD NUMBER</label>
-        <input type="text" id="card-number" name="card-number"
-        placeholder="1234 5678 9101 1112" required minlength="16" maxlength="16">
-
-        <label for="card-holder">CARD HOLDER</label>
-        <input type="text" id="card-holder" name="card-holder"
-        placeholder="John Doe" required>
-
-        <div id="exp-container">
-          <label for="card-month">EXPIRATION</label>
-          <input type="text" id="card-month" name="card-month"
-          placeholder="MM" required minlength="2" maxlength="2">
-          <input type="text" id="card-year" name="card-year"
-          placeholder="YY" required minlength="2" maxlength="2">
+        <div class="input-box">
+          <label for="card-number">CARD NUMBER</label>
+          <input type="text" id="card-number" placeholder="1234 5678 9101 1020"
+             required minlength="16" maxlength="16">
         </div>
-      </section>
 
-      <!-- CARD BACK -->
-      <section id="card-back">
-        <div id="card-stripe"></div>
+        <div class="name-exp-row">
 
-        <label for="card-cvc">CVC</label>
-        <input type="text" id="card-cvc" name="card-cvc"
-        placeholder="123" required minlength="3" maxlength="4">
-      </section>
+          <div class="holder-box">
+            <label for="card-holder">CARD HOLDER</label>
+            <input type="text" id="card-holder" placeholder="John Doe" required>
+          </div>
 
-      <button type="submit">Submit Payment</button>
-
-    </form>
-
-  </div>
-
-</body>
-</html>
-
+          <div class="exp-box">
+            <label for="card-month">EXPIRATION</label>
+            <div class="exp-row">
+              <input type="text" id="card-month" placeholder="MM"
+                     required
