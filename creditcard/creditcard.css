@@ -1,129 +1,120 @@
-/* General page styles */
+/* PAGE BACKGROUND */
 body {
-  background: #ffb242;
+  background: #f2a640;        /* warm orange like mockup */
   font-family: Arial, sans-serif;
-  padding: 70px 0;
   text-transform: uppercase;
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-/* Main container that holds everything */
+/* MAIN GRID WRAPPER */
 #form-container {
-  margin: auto;
-  width: 500px;
-  height: 290px;
+  width: 650px;
+  height: 320px;
   position: relative;
 }
 
-/* Card front + back shared styles */
-#card-front,
+/* FRONT CARD */
+#card-front {
+  position: absolute;
+  width: 420px;
+  height: 260px;
+  background: #e5e5e5;             /* light gray like mockup */
+  border-radius: 10px;
+  padding: 25px;
+  z-index: 2;
+  top: 0;
+  left: 0;
+  box-shadow: 4px 4px 10px rgba(0,0,0,0.15);
+  color: #333;
+}
+
+/* BACK CARD */
 #card-back {
   position: absolute;
-  background-color: #498ee4;
-  width: 390px;
-  height: 250px;
-  border-radius: 8px;
-  padding: 20px 30px;
-  box-sizing: border-box;
-  color: white;
-  letter-spacing: 1px;
-}
-
-/* Card front stays on top */
-#card-front {
-  z-index: 2;
-}
-
-/* Card back behind card front */
-#card-back {
-  top: 40px;
-  left: 20px;
+  width: 420px;
+  height: 260px;
+  background: #dedede;             /* slightly darker gray */
+  border-radius: 10px;
+  padding: 25px;
   z-index: 1;
+
+  /* ✅ shift right so the overlap matches the mockup */
+  top: 25px;
+  left: 240px;
+
+  box-shadow: 4px 4px 10px rgba(0,0,0,0.15);
 }
 
-/* Black magnetic stripe */
-#stripe {
-  background: #3d5266;
-  height: 60px;
-  width: calc(100% + 60px);
-  margin-left: -30px;
-  border-radius: 3px;
-  margin-top: 15px;
+/* STRIPE */
+#card-strip {
+  width: 100%;
+  height: 55px;
+  background: #3a3a3a;      /* dark stripe */
+  margin: 10px 0 40px 0;
+  border-radius: 4px;
 }
 
-/* CVC input on back of card */
-#cvc-box {
-  margin-top: 95px;
-  width: 120px;
-}
-
+/* HEADINGS, LABELS */
 label {
-  font-size: 10px;
-  margin-bottom: 3px;
   display: block;
+  font-size: 12px;
+  margin-bottom: 4px;
+  color: #333;
 }
 
+/* INPUTS */
 input {
   width: 100%;
-  height: 28px;
-  border: none;
-  border-radius: 4px;
-  background: #5a9def;
-  color: white;
-  padding: 6px;
-  margin-bottom: 12px;
-  font-size: 10px;
+  padding: 10px;
+  background: white;
+  border: 1px solid #999;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  font-size: 12px;
+  color: #333;
+  text-transform: none; /* normal case in text boxes */
 }
 
 input::placeholder {
-  color: white;
-  opacity: 0.7;
+  color: #777;
 }
 
-/* Front card top row: total + logo */
-#total-row {
+/* EXPIRATION CONTAINER */
+#exp-container {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 15px;
+  gap: 10px;
 }
 
-#total {
-  font-size: 11px;
+/* ✅ CVC box correctly placed on right side of BACK card */
+#cvc-container {
+  position: absolute;
+  right: 20px;
+  bottom: 30px;
+  width: 120px;
 }
 
-#card-logo {
+#cvc-container label {
+  font-size: 12px;
+}
+
+/* SUBMIT BUTTON */
+button {
+  position: absolute;
+  bottom: -60px;
+  right: 200px;
+  width: 130px;
   height: 40px;
-}
-
-/* CARD HOLDER + EXPIRATION side-by-side */
-#holder-exp-wrapper {
-  display: grid;
-  grid-template-columns: 60% 40%;
-  gap: 10px;
-}
-
-/* Expiration MM + YY next to each other */
-.exp-row {
-  display: flex;
-  gap: 10px;
-}
-
-/* Submit button */
-#submit-btn {
   background: white;
-  color: #ffb242;
-  border: none;
-  width: 160px;
-  height: 40px;
+  border: 2px solid #333;
   border-radius: 6px;
   cursor: pointer;
-  font-size: 12px;
-  padding: 0;
-  position: absolute;
-  bottom: -55px;
-  right: 0;
+  text-transform: uppercase;
+  font-size: 13px;
 }
 
-#submit-btn:hover {
-  background: #fff;
+button:hover {
+  background: #f9f9f9;
 }
