@@ -4,19 +4,20 @@ function showRecipe(recipe) {
   const display = document.querySelector("#recipeDisplay");
 
   display.innerHTML = `
-    <div>
-      <h2>${recipe.name}</h2>
-      <img src="images/${recipe.image}" alt="${recipe.name}">
-      <div>
-        <span class="rating" role="img" aria-label="Rating: ${recipe.rating} out of 5 stars">
-          ${"⭐".repeat(recipe.rating)}${"☆".repeat(5 - recipe.rating)}
-        </span>
-      </div>
-    </div>
+    <img src="images/${recipe.image}" alt="${recipe.name}">
 
-    <p class="description">${recipe.description}</p>
+    <div class="recipe-info">
+      <span class="tag">dessert</span>
+
+      <h2 class="recipe-title">${recipe.name}</h2>
+
+      <span class="rating" role="img" aria-label="Rating: ${recipe.rating} out of 5 stars">
+        ${"⭐".repeat(recipe.rating)}${"☆".repeat(5 - recipe.rating)}
+      </span>
+
+      <p>${recipe.description}</p>
+    </div>
   `;
 }
 
-// Show the first recipe on page load
 showRecipe(recipes[0]);
