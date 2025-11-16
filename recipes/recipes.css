@@ -1,0 +1,97 @@
+/* GLOBAL STYLES */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --primary-color: #1B98E0;
+  --secondary-color: #59c3c3;
+  --text-dark: #333;
+  --text-light: #ebebeb;
+  --primary-font: Arial, Helvetica, sans-serif;
+  --secondary-font: "Amatic SC", cursive;
+}
+
+body {
+  font-family: var(--primary-font);
+  padding: 1rem;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* HEADER */
+header {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  font-family: var(--secondary-font);
+}
+
+/* SEARCH FORM */
+#searchForm {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+#searchForm input {
+  flex: 1;
+  padding: 0.5rem;
+}
+
+#searchForm button {
+  padding: 0.5rem 1rem;
+  background: var(--primary-color);
+  color: white;
+  border: none;
+}
+
+/* RECIPE DISPLAY */
+#recipeDisplay {
+  margin-top: 1rem;
+}
+
+.description {
+  display: none; /* hidden on mobile */
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.social {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+/* BREAKPOINT — 600px */
+@media (min-width: 600px) {
+  #recipeDisplay {
+    display: flex;
+    gap: 1rem;
+  }
+
+  .description {
+    display: block;
+  }
+}
+
+/* BREAKPOINT — 960px */
+@media (min-width: 960px) {
+  body {
+    max-width: 960px;
+    margin: auto;
+  }
+}
