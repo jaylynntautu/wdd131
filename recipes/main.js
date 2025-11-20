@@ -48,7 +48,7 @@ function ratingTemplate(rating) {
 
 function recipeTemplate(recipe) {
   return `
-    <img src="images/${recipe.image}" alt="${recipe.name}">
+    <img src="${recipe.image}" alt="${recipe.name}">
 
     <div class="recipe-info">
 
