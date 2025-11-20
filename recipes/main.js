@@ -16,11 +16,9 @@ function getRandomListEntry(list) {
 
 function tagsTemplate(tags) {
   let html = "";
-
   tags.forEach((tag) => {
     html += `<span class="tag">${tag}</span>`;
   });
-
   return html;
 }
 
@@ -35,20 +33,19 @@ function ratingTemplate(rating) {
 
   for (let i = 1; i <= 5; i++) {
     if (i <= rating) {
-      html += `⭐`;
+      html += `<span aria-hidden="true" class="icon-star">⭐</span>`;
     } else {
-      html += `☆`;
+      html += `<span aria-hidden="true" class="icon-star-empty">☆</span>`;
     }
   }
 
   html += `</span>`;
-
   return html;
 }
 
 function recipeTemplate(recipe) {
   return `
-    <img src="${recipe.image}" alt="${recipe.name}">
+    <img src="images/${recipe.image}" alt="${recipe.name}">
 
     <div class="recipe-info">
 
