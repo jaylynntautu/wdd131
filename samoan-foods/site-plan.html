@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Samoan Local Favorite Foods | Site Plan</title>
+  <link rel="stylesheet" href="styles/site-plan.css">
+</head>
+
+<body>
+  <header>
+    <h1>Samoan Local Favorite Foods</h1>
+    <h2>Personal Web Application Site Plan</h2>
+  </header>
+
+  <main>
+
+    <!-- PURPOSE & AUDIENCE -->
+    <section>
+      <h2>1. Purpose and Audience</h2>
+      <p>
+        The purpose of this website is to present and celebrate some of the most loved traditional Samoan foods. 
+        The site will showcase a collection of dishes with descriptions, images, and cultural context formatted in a clean and visually appealing way.
+      </p>
+
+      <p>
+        The intended audience includes classmates, instructors, family members, and anyone interested in learning about Samoan cuisine or Pacific Island culture. 
+        Content is written simply and clearly so that users who may be unfamiliar with Samoan foods can easily understand and enjoy the site.
+      </p>
+    </section>
+
+    <!-- DYNAMIC ELEMENTS -->
+    <section>
+      <h2>2. Dynamic Elements</h2>
+      <p>
+        JavaScript will add interactive features across the site. A separate module will store an array of food objects containing dish names, categories, images, 
+        ratings, and descriptions. The Foods page will include a live search bar that filters foods using the <code>filter()</code> method, plus a category filter 
+        (Main Dish, Seafood, Dessert) that uses conditional logic to update which items appear.
+      </p>
+
+      <p>
+        The Home page will feature a “Random Food Generator” button that selects and displays a random dish using DOM manipulation. ES Modules will organize the code 
+        into multiple functions. These features demonstrate arrays, objects, array methods, event handling, DOM interaction, and conditional branching.
+      </p>
+    </section>
+
+    <!-- LOGO -->
+    <section>
+      <h2>3. Logo</h2>
+      <p>Logo concept featuring a taro-leaf icon and the site title:</p>
+
+      <div class="logo-box">
+        <img src="https://cdn-icons-png.flaticon.com/512/7650/7650678.png" alt="Taro Leaf Icon">
+        <span class="logo-text">Samoan Local Favorite Foods</span>
+      </div>
+    </section>
+
+    <!-- COLORS & FONTS -->
+    <section>
+      <h2>4. Colors & Fonts</h2>
+
+      <h3>Color Scheme</h3>
+      <ul>
+        <li><strong>Primary (Ocean Blue):</strong> #0A5F8A</li>
+        <li><strong>Secondary (Coconut Cream):</strong> #FFF9F3</li>
+        <li><strong>Accent (Coral):</strong> #FF6F59</li>
+      </ul>
+
+      <h3>Fonts</h3>
+      <ul>
+        <li><strong>Headings:</strong> Poppins</li>
+        <li><strong>Body Text:</strong> Open Sans</li>
+      </ul>
+    </section>
+
+    <!-- CONTENT -->
+    <section>
+      <h2>5. Content</h2>
+
+      <h3>Home Page Content</h3>
+      <p>
+        Welcome to “Samoan Local Favorite Foods,” a simple and informative site highlighting several traditional foods from the islands of Samoa. 
+        From coconut-rich dishes to sweet island treats, this site shares a collection of well-loved meals that hold cultural and personal significance. 
+        Use the Random Food Generator to discover a dish or explore the full food list.
+      </p>
+
+      <h3>Foods Page Content</h3>
+      <p>
+        This page displays a grid of Samoan foods with category filters and a search bar. Each card includes an image, the food name, category, and a brief description.
+        Users can browse, filter, and learn more about each dish.
+      </p>
+
+      <h3>Food Data Items</h3>
+      <ul>
+        <li><strong>Palusami:</strong> Taro leaves baked in coconut cream (Main Dish).</li>
+        <li><strong>Oka i’a:</strong> Fresh raw fish marinated in lemon and coconut milk (Seafood).</li>
+        <li><strong>Sapasui:</strong> Samoan chop suey with noodles and savory sauce (Main Dish).</li>
+        <li><strong>Panikeke:</strong> Sweet round Samoan pancakes (Dessert).</li>
+        <li><strong>Keke Pua’a:</strong> Steamed pork buns (Main Dish).</li>
+        <li><strong>Faiai Eleni:</strong> Mackerel baked in coconut cream (Seafood).</li>
+        <li><strong>Fa’ausi:</strong> Taro topped with caramel coconut sauce (Dessert).</li>
+        <li><strong>Talo (Taro):</strong> A staple Samoan starch served with meals (Main Dish).</li>
+      </ul>
+
+    </section>
+
+    <!-- WIREFRAMES -->
+    <section>
+      <h2>6. Wireframes</h2>
+      <p>Simple wireframes showing the layout of each page:</p>
+
+      <h3>Home Page Wireframe</h3>
+      <pre class="wireframe">
++-------------------------------------------------------+
+|                      HERO IMAGE                       |
+|           "Samoan Local Favorite Foods"               |
++-------------------------------------------------------+
+|          [ Random Food Generator Button ]             |
++-------------------------------------------------------+
+|            Featured Foods (3 Cards Across)            |
+|          [Card]   [Card]   [Card]                     |
++-------------------------------------------------------+
+      </pre>
+
+      <h3>Foods Page Wireframe</h3>
+      <pre class="wireframe">
++-------------------------------------------------------+
+| Search Bar: [ Search foods... ]                       |
+| Category Filter: [ Main Dish | Seafood | Dessert ]    |
++-------------------------------------------------------+
+|               FOOD CARD GRID                          |
+|   [Card]   [Card]   [Card]   [Card]                   |
+|   [Card]   [Card]   [Card]   [Card]                   |
++-------------------------------------------------------+
+      </pre>
+    </section>
+
+  </main>
+
+</body>
+</html>
