@@ -50,11 +50,13 @@
       <p>Logo concept featuring a simple leaf icon and the site title:</p>
 
       <div class="logo-box">
-        <img 
-          src="https://cdn-icons-png.flaticon.com/512/2909/2909839.png" 
-          alt="Leaf Icon" 
-          class="logo-icon"
-        >
+        <!-- INLINE SVG LEAF ICON (permanent, safe, not external) -->
+        <svg class="logo-icon" viewBox="0 0 64 64" role="img" aria-labelledby="leafTitle">
+          <title id="leafTitle">Leaf logo icon</title>
+          <path d="M12 52 C12 30 26 12 46 12 C46 32 32 52 12 52 Z" fill="#2e7d32"/>
+          <path d="M18 48 L40 20" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+        </svg>
+
         <span class="logo-text">Samoan Local Favorite Foods</span>
       </div>
     </section>
