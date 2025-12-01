@@ -1,3 +1,4 @@
+/* Overall Page Styles */
 body {
   font-family: "Open Sans", sans-serif;
   background-color: #FFF9F3;
@@ -23,27 +24,31 @@ section {
   border-bottom: 1px solid #ccc;
 }
 
+/* LOGO SECTION */
 .logo-box {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   padding: 15px 0;
 }
 
-.logo-box img {
-  width: 60px;
+.logo-icon {
+  width: 55px;
+  height: auto;
 }
 
 .logo-text {
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   font-weight: bold;
-  color: #FF6F59;
+  color: #FF6F59; /* Coral accent */
 }
 
+/* List Styling */
 ul li {
   margin-bottom: 8px;
 }
 
+/* Wireframe Box */
 .wireframe {
   background: #ffffff;
   padding: 15px;
