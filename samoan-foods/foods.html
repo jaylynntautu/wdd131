@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Foods | Samoan Local Favorite Foods</title>
+  <link rel="stylesheet" href="styles/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <svg class="logo-icon" viewBox="0 0 64 64" role="img" aria-labelledby="leafTitle">
+        <title id="leafTitle">Leaf logo icon</title>
+        <path d="M12 52 C12 30 26 12 46 12 C46 32 32 52 12 52 Z" fill="#2e7d32"/>
+        <path d="M18 48 L40 20" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+      </svg>
+      <span class="logo-text">Samoan Local Favorite Foods</span>
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="foods.html" class="active">Foods</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- SEARCH BAR -->
+    <section class="search-section">
+      <input type="text" id="searchBar" placeholder="Search foods...">
+    </section>
+
+    <!-- CATEGORY FILTER BUTTONS -->
+    <section class="filter-section">
+      <button class="filter-btn" data-category="All">All</button>
+      <button class="filter-btn" data-category="Main Dish">Main Dish</button>
+      <button class="filter-btn" data-category="Seafood">Seafood</button>
+      <button class="filter-btn" data-category="Dessert">Dessert</button>
+    </section>
+
+    <!-- GRID OF FOOD CARDS -->
+    <section class="foods-grid" id="foodsGrid"></section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Samoan Local Favorite Foods | Designed by Jaylynn</p>
+  </footer>
+
+  <script type="module" src="scripts/foods.js"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Samoan Local Favorite Foods</title>
+  <link rel="stylesheet" href="styles/styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Open+Sans&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <header>
+    <div class="logo">
+      <svg class="logo-icon" viewBox="0 0 64 64" role="img" aria-labelledby="leafTitle">
+        <title id="leafTitle">Leaf logo icon</title>
+        <path d="M12 52 C12 30 26 12 46 12 C46 32 32 52 12 52 Z" fill="#2e7d32"/>
+        <path d="M18 48 L40 20" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+      </svg>
+      <span class="logo-text">Samoan Local Favorite Foods</span>
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="foods.html">Foods</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HERO SECTION (matches wireframe) -->
+    <section class="hero">
+      <h1>Samoan Local Favorite Foods</h1>
+      <p>Explore traditional favorites and discover island comfort dishes.</p>
+    </section>
+
+    <!-- RANDOM FOOD GENERATOR (per site plan) -->
+    <section class="generator-section">
+      <button id="randomFoodBtn">Random Food Generator</button>
+      <div id="randomFoodDisplay" class="food-card hidden"></div>
+    </section>
+
+    <!-- FEATURED FOODS 3 CARDS ACROSS (per wireframe) -->
+    <section class="featured">
+      <h2>Featured Foods</h2>
+      <div class="featured-grid" id="featuredGrid"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Samoan Local Favorite Foods | Designed by Jaylynn</p>
+  </footer>
+
+  <script type="module" src="scripts/main.js"></script>
+</body>
+</html>

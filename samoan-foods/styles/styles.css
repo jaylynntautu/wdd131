@@ -1,0 +1,158 @@
+/* ===========================
+   GLOBAL STYLES
+=========================== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  background-color: #FFF9F3; /* Secondary Coconut Cream */
+  color: #333;
+  margin: 0;
+}
+
+/* ===========================
+   HEADER & NAV
+=========================== */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 25px;
+  border-bottom: 4px solid #0A5F8A; /* Primary Ocean Blue */
+  background-color: white;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo-icon {
+  width: 50px;
+}
+
+.logo-text {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #FF6F59; /* Coral Accent */
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  text-decoration: none;
+  font-family: "Poppins", sans-serif;
+  color: #0A5F8A;
+  font-weight: 600;
+}
+
+nav a.active,
+nav a:hover {
+  color: #FF6F59; /* Coral Accent */
+}
+
+/* ===========================
+   HERO (Wireframe: full width solid color)
+=========================== */
+.hero {
+  text-align: center;
+  background-color: #0A5F8A; /* Primary Ocean Blue */
+  color: white;
+  padding: 60px 20px;
+}
+
+.hero h1 {
+  font-family: "Poppins", sans-serif;
+  font-size: 2.2rem;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: auto;
+}
+
+/* ===========================
+   RANDOM GENERATOR SECTION
+=========================== */
+.generator-section {
+  text-align: center;
+  padding: 30px 20px;
+}
+
+#randomFoodBtn {
+  background-color: #FF6F59; /* Coral Accent */
+  color: white;
+  border: none;
+  padding: 14px 26px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-family: "Poppins", sans-serif;
+  transition: 0.3s;
+}
+
+#randomFoodBtn:hover {
+  background-color: #e45b47;
+}
+
+.food-card {
+  margin: 20px auto;
+  max-width: 320px;
+  background: white;
+  border: 2px solid #0A5F8A;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.food-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.hidden {
+  display: none;
+}
+
+/* ===========================
+   FEATURED GRID (3 CARDS ACROSS)
+=========================== */
+.featured {
+  padding: 30px 20px;
+  text-align: center;
+}
+
+.featured-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding-top: 20px;
+}
+
+.featured-grid .food-card {
+  border: 2px solid #FF6F59; /* Accent per plan */
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+footer {
+  text-align: center;
+  padding: 18px;
+  background-color: #0A5F8A;
+  color: white;
+  font-size: 0.9rem;
+  margin-top: 40px;
+}
