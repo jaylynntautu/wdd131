@@ -1,7 +1,6 @@
 /* ===========================
-   BASE LAYOUT
+   BASE STYLES
 =========================== */
-
 body {
   font-family: "Open Sans", sans-serif;
   background-color: #FFF9F3;
@@ -36,14 +35,11 @@ header {
   color: #FF6F59;
 }
 
-/* ===========================
-   NAVIGATION
-=========================== */
-
 nav ul {
   list-style: none;
   display: flex;
   gap: 20px;
+  margin: 0;
 }
 
 nav a {
@@ -58,10 +54,6 @@ nav a:hover {
   color: #FF6F59;
 }
 
-/* ===========================
-   MAIN SPACING & HEADERS
-=========================== */
-
 main {
   padding: 20px;
 }
@@ -72,13 +64,22 @@ h1, h2, h3 {
   text-align: center;
 }
 
+.intro-text {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
 /* ===========================
-   RANDOM GENERATOR BUTTON
+   RANDOM GENERATOR
 =========================== */
+.generator-section {
+  text-align: center;
+  margin-bottom: 40px;
+}
 
 #randomBtn {
   display: block;
-  margin: 0 auto 30px auto;
+  margin: 30px auto;
   background-color: #0A5F8A;
   color: white;
   border: none;
@@ -93,27 +94,23 @@ h1, h2, h3 {
   background-color: #FF6F59;
 }
 
-/* ===========================
-   RANDOM RESULT SECTION SPACING
-=========================== */
-
-.generator-section {
-  text-align: center;
-  padding: 40px 20px;
-  margin-bottom: 40px;
+.random-card {
+  display: flex;
+  justify-content: center;
+  margin: 30px auto;
+  width: 300px;
 }
 
 /* ===========================
-   FOOD CARDS (HOME & FOODS)
+   CARD STYLING
 =========================== */
-
 .food-card {
   border: 2px solid #0A5F8A;
   border-radius: 10px;
   text-align: center;
   padding: 15px;
   background-color: white;
-  width: 300px;
+  width: 280px;
 }
 
 .food-card img {
@@ -124,22 +121,26 @@ h1, h2, h3 {
 /* ===========================
    FEATURED GRID
 =========================== */
-
 .featured-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 25px;
   max-width: 900px;
   margin: 0 auto;
 }
 
-/* ===========================
-   SEARCH BAR & FILTERS
-=========================== */
+.featured-section {
+  margin-top: 80px;
+}
 
-.search-section {
+/* ===========================
+   FOODS PAGE SEARCH/FILTER
+=========================== */
+.search-section,
+.filter-section {
   display: flex;
   justify-content: center;
+  gap: 10px;
   margin-top: 20px;
 }
 
@@ -149,13 +150,6 @@ h1, h2, h3 {
   border: 2px solid #0A5F8A;
   border-radius: 6px;
   font-size: 1rem;
-}
-
-.filter-section {
-  display: flex;
-  justify-content: center;
-  gap: 10px;
-  margin-top: 15px;
 }
 
 .filter-btn {
@@ -172,23 +166,17 @@ h1, h2, h3 {
   background-color: #FF6F59;
 }
 
-/* ===========================
-   FOODS PAGE GRID
-=========================== */
-
 .foods-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
-  padding: 40px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
   max-width: 1000px;
-  margin: 0 auto;
+  margin: 40px auto;
 }
 
 /* ===========================
    FOOTER
 =========================== */
-
 footer {
   text-align: center;
   padding: 20px;
