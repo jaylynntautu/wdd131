@@ -4,9 +4,7 @@ const foodsGrid = document.getElementById("foodsGrid");
 const searchBar = document.getElementById("searchBar");
 const filterBtns = document.querySelectorAll(".filter-btn");
 
-// ===============================
-// DISPLAY ALL FOODS INITIALLY
-// ===============================
+// Render food cards
 function displayFoods(list) {
   foodsGrid.innerHTML = "";
   list.forEach(food => {
@@ -21,11 +19,10 @@ function displayFoods(list) {
   });
 }
 
+// show all initially
 displayFoods(foods);
 
-// ===============================
-// SEARCH FUNCTION (filter by name)
-// ===============================
+// Search by name
 searchBar.addEventListener("input", () => {
   const term = searchBar.value.toLowerCase();
   const filtered = foods.filter(food =>
@@ -34,19 +31,16 @@ searchBar.addEventListener("input", () => {
   displayFoods(filtered);
 });
 
-// ===============================
-// CATEGORY FILTER BUTTONS
-// ===============================
+// Filter by category
 filterBtns.forEach(btn => {
   btn.addEventListener("click", () => {
     const category = btn.dataset.category;
 
     if (category === "All") {
       displayFoods(foods);
-      return;
+    } else {
+      const filtered = foods.filter(food => food.category === category);
+      displayFoods(filtered);
     }
-
-    const filtered = foods.filter(food => food.category === category);
-    displayFoods(filtered);
   });
 });

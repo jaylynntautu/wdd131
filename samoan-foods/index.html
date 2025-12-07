@@ -4,67 +4,53 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Samoan Local Favorite Foods</title>
-  <link rel="stylesheet" href="styles/styles.css?v=4">
+  <link rel="stylesheet" href="styles/styles.css">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&family=Open+Sans&display=swap" rel="stylesheet">
 </head>
 
 <body>
-
-<header>
-  <div class="logo">
-    <svg class="logo-icon" viewBox="0 0 64 64">
-      <path d="M12 52 C12 30 26 12 46 12 C46 32 32 52 12 52 Z" fill="#2e7d32"/>
-      <path d="M18 48 L40 20" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
-    </svg>
-    <span class="logo-text">Samoan Local Favorite Foods</span>
-  </div>
-
-  <nav>
-    <ul>
-      <li><a href="index.html" class="active">Home</a></li>
-      <li><a href="foods.html">Foods</a></li>
-    </ul>
-  </nav>
-</header>
-
-<main>
-
-  <h1>Samoan Local Favorite Foods</h1>
-  <p class="intro-text">Explore traditional favorites and discover island comfort dishes.</p>
-
-  <div class="generator-section">
-    <button id="randomBtn">Random Food Generator</button>
-    <div id="randomResult" class="random-card"></div>
-  </div>
-
-  <h2>Featured Foods</h2>
-
-  <section class="featured-grid featured-section">
-    <div class="food-card">
-      <img src="images/palusami.jpg" alt="Palusami">
-      <h3>Palusami</h3>
-      <p>Main Dish</p>
+  <header>
+    <div class="logo">
+      <svg class="logo-icon" viewBox="0 0 64 64" role="img" aria-labelledby="leafTitle">
+        <title id="leafTitle">Leaf logo icon</title>
+        <path d="M12 52 C12 30 26 12 46 12 C46 32 32 52 12 52 Z" fill="#2e7d32"/>
+        <path d="M18 48 L40 20" stroke="#ffffff" stroke-width="3" stroke-linecap="round"/>
+      </svg>
+      <span class="logo-text">Samoan Local Favorite Foods</span>
     </div>
 
-    <div class="food-card">
-      <img src="images/oka.jpg" alt="Oka i’a">
-      <h3>Oka i’a</h3>
-      <p>Seafood</p>
-    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="foods.html">Foods</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <div class="food-card">
-      <img src="images/sapasui.jpg" alt="Sapasui">
-      <h3>Sapasui</h3>
-      <p>Main Dish</p>
-    </div>
-  </section>
+  <main>
+    <!-- HERO (per site plan) -->
+    <section class="hero">
+      <h1>Samoan Local Favorite Foods</h1>
+      <p>Explore traditional favorites and discover island comfort dishes from Samoa.</p>
+    </section>
 
-</main>
+    <!-- RANDOM FOOD GENERATOR (button + single card) -->
+    <section class="generator-section">
+      <button id="randomFoodBtn">Random Food Generator</button>
+      <div id="randomFoodDisplay" class="food-card hidden"></div>
+    </section>
 
-<footer>
-  <p>&copy; 2025 Samoan Local Favorite Foods</p>
-</footer>
+    <!-- FEATURED FOODS (3 cards, filled by JS) -->
+    <section class="featured">
+      <h2>Featured Foods</h2>
+      <div class="featured-grid" id="featuredGrid"></div>
+    </section>
+  </main>
 
-<script type="module" src="scripts/main.js"></script>
+  <footer>
+    <p>&copy; 2025 Samoan Local Favorite Foods | Designed by Jaylynn</p>
+  </footer>
+
+  <script type="module" src="scripts/main.js"></script>
 </body>
 </html>
