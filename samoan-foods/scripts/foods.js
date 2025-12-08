@@ -10,7 +10,7 @@ function displayFoods(list) {
   list.forEach(food => {
     foodsGrid.innerHTML += `
       <div class="food-card">
-        <img src="${food.image}" alt="${food.name}" loading="lazy">
+        <img src="${food.image}?v=2" alt="${food.name}" loading="lazy">
         <h3>${food.name}</h3>
         <p>${food.category}</p>
         <p>${food.description}</p>
