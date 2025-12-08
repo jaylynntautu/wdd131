@@ -6,7 +6,7 @@ const featuredGrid = document.getElementById("featuredGrid");
 foods.slice(0, 3).forEach(food => {
   featuredGrid.innerHTML += `
     <div class="food-card">
-      <img src="${food.image}" alt="${food.name}">
+      <img src="${food.image}" alt="${food.name}" loading="lazy">
       <h3>${food.name}</h3>
       <p>${food.category}</p>
     </div>
@@ -22,7 +22,7 @@ randomBtn.addEventListener("click", () => {
   randomDisplay.classList.remove("hidden");
 
   randomDisplay.innerHTML = `
-    <img src="${randomFood.image}" alt="${randomFood.name}">
+    <img src="${randomFood.image}" alt="${randomFood.name}" loading="lazy">
     <h3>${randomFood.name}</h3>
     <p>${randomFood.category}</p>
     <p>${randomFood.description}</p>

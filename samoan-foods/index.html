@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="description" content="Explore Samoan local favorite foods, learn cultural dishes, and discover traditional island meals.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Samoan Local Favorite Foods</title>
   <link rel="stylesheet" href="styles/styles.css">
@@ -28,23 +29,40 @@
   </header>
 
   <main>
-    <!-- HERO (per site plan) -->
+
     <section class="hero">
       <h1>Samoan Local Favorite Foods</h1>
       <p>Explore traditional favorites and discover island comfort dishes from Samoa.</p>
     </section>
 
-    <!-- RANDOM FOOD GENERATOR (button + single card) -->
     <section class="generator-section">
       <button id="randomFoodBtn">Random Food Generator</button>
       <div id="randomFoodDisplay" class="food-card hidden"></div>
     </section>
 
-    <!-- FEATURED FOODS (3 cards, filled by JS) -->
     <section class="featured">
       <h2>Featured Foods</h2>
-      <div class="featured-grid" id="featuredGrid"></div>
+      <div class="featured-grid">
+        <div class="food-card">
+          <img src="images/palusami.jpg" alt="Palusami" loading="lazy">
+          <h3>Palusami</h3>
+          <p>Main Dish</p>
+        </div>
+
+        <div class="food-card">
+          <img src="images/oka.jpg" alt="Oka i’a" loading="lazy">
+          <h3>Oka i’a</h3>
+          <p>Seafood</p>
+        </div>
+
+        <div class="food-card">
+          <img src="images/sapasui.jpg" alt="Sapasui" loading="lazy">
+          <h3>Sapasui</h3>
+          <p>Main Dish</p>
+        </div>
+      </div>
     </section>
+
   </main>
 
   <footer>
